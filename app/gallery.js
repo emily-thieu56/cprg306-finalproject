@@ -41,5 +41,23 @@ export default function Gallery(){
     }
 } 
 
+useEffect( () => {
+    (async () => {
+        if ( characterIdsIds != null && characterIds.length > 0){
+            for(let i = 0; i < artworkIds.length; i++) {
+                let thisCharacter = await getCharacterById( characterIds[i]);
+                thisGallery.push(thisCharacter);
+            }
+            console.dir(thisGallery)
+            setGalleryDisplay(thisGallery);
+        }
+    })();
+   }, []);
+
+   return(
+    <section>
+        {galleryDisplay.map( (art) => <DisneyCharacter characterObj={character} key={character._id}/>)}
+    </section>
+   )
 
 }
