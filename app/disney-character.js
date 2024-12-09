@@ -13,7 +13,6 @@ export default function DisneyCharacter({characterObj}){
             <h3 className="text-2xl">{name}</h3>
             <img src={imageUrl} className="max-h-52 border-2 border-cyan-900"/>
             <ul>
-                <li>{imageUrl}</li>
                 <li>Name: {name}</li>
                 <li>Film featured in: {films}</li>
                 <li>Short films featured in: {shortFilms}</li>
