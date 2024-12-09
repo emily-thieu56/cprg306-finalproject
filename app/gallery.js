@@ -57,10 +57,11 @@ export default function Gallery(){
 //    }, []);
 
    return(
-    <section>
+    <section className="items-center justify-center">
         <div>
+            <label className="ml-3 text-white font-serif font-semibold"> Get New Characters: </label>
             <button
-            className="bg-purple-500 p-1 m-2 w-28 active:bg-white"
+            className="bg-purple-500 p-1 m-2 w-28 active:bg-white text-white rounded p-x1 content-center"
             onClick = {getListOfCharacterIds}
             > Refresh Page </button>
         </div>
